@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.lfq.diary.home.title.ApplicationTitle
+        android:id="@+id/ah_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+    </com.lfq.diary.home.title.ApplicationTitle>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/ah_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </android.support.v4.view.ViewPager>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ah_establish"
+            tools:tint="@color/blue"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="12dp"
+            android:src="@mipmap/ic_pencil"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp" />
+
+    </FrameLayout>
+
+</LinearLayout>

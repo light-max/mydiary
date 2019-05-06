@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.lfq.diary.base.BaseTitle
+        android:id="@id/base_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.lfq.diary.base.BaseTitle>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:padding="16dp">
+
+       <Button
+           android:id="@+id/at_blue"
+           android:foreground="?android:attr/selectableItemBackgroundBorderless"
+           tools:text="默认淡然"
+           android:backgroundTint="@color/blue"
+           android:textSize="18sp"
+           android:textAllCaps="false"
+           android:textColor="@color/white"
+           android:layout_width="match_parent"
+           android:layout_height="55dp" />
+
+       <Button
+           android:id="@+id/at_rad"
+           android:layout_marginTop="8dp"
+           android:foreground="?android:attr/selectableItemBackgroundBorderless"
+           tools:text="少女粉红"
+           android:backgroundTint="@color/rad"
+           android:textSize="18sp"
+           android:textAllCaps="false"
+           android:textColor="@color/white"
+           android:layout_width="match_parent"
+           android:layout_height="55dp" />
+
+   </LinearLayout>
+
+</LinearLayout>

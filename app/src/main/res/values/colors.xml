@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="white">@android:color/white</color>
+    <color name="white_2">#333333</color>
+    <color name="white_3">#999999</color>
+    <color name="white_1">#DBDBDB</color>
+    <color name="white_4">#D3C3C3</color>
+    <color name="white_5">#FFFFFF</color>
+    <color name="rad">#FB6063</color>
+    <color name="blue">#00659F</color>
+    <color name="black">@android:color/black</color>
+</resources>

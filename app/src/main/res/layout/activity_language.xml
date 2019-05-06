@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.lfq.diary.base.BaseTitle
+        android:id="@id/base_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.lfq.diary.base.BaseTitle>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/al_chinese"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:text="简体中文"
+            android:backgroundTint="@color/white_2"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+        <Button
+            android:id="@+id/al_japan"
+            android:layout_marginTop="8dp"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:text="日本語"
+            android:backgroundTint="@color/white_2"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+        <Button
+            android:id="@+id/al_english"
+            android:layout_marginTop="8dp"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:text="English"
+            android:backgroundTint="@color/white_2"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

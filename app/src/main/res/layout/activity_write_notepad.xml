@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.lfq.diary.base.BaseTitle
+        android:id="@id/base_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_height="40dp">
+    </com.lfq.diary.base.BaseTitle>
+
+    <EditText
+        android:id="@+id/awn_title"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:gravity="top|left"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:hint="标题"
+        android:maxLines="1"
+        android:textColorHint="#CACACA"
+        android:singleLine="true" />
+
+    <View
+        android:layout_height="2dp"
+        android:background="#DCDCDC"
+        android:layout_width="match_parent"
+        android:layout_marginRight="10dp"/>
+
+    <EditText
+        android:id="@+id/awn_content"
+        android:layout_height="match_parent"
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:gravity="top|left"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:hint="内容"
+        android:textColorHint="#CACACA"
+        android:minLines="20" />
+
+</LinearLayout>

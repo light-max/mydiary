@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_gravity="center">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:text="日记"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:id="@+id/hn_diary"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"/>
+
+    <View
+        android:layout_height="match_parent"
+        android:layout_width="1dp"
+        android:layout_marginLeft="-1dp"
+        android:id="@+id/hn_line1"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:text="电话"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:id="@+id/hn_phone"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"/>
+
+    <View
+        android:layout_height="match_parent"
+        android:layout_width="1dp"
+        android:id="@+id/hn_line2"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:text="记事本"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:id="@+id/hn_notepad"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_marginLeft="-1dp"/>
+
+</LinearLayout>
+
