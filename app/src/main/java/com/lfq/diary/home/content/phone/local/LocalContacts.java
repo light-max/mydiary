@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -19,6 +20,7 @@ import com.lfq.diary.util.ToastTools;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
@@ -27,6 +29,8 @@ import butterknife.BindView;
  * 浏览本地联系人
  */
 public class LocalContacts extends BaseActivity implements AdapterView.OnItemClickListener {
+    private String TAG = "LocalContacts";
+
     @Override
     protected int attrView() {
         return R.layout.activity_local_contacts;
@@ -98,7 +102,7 @@ public class LocalContacts extends BaseActivity implements AdapterView.OnItemCli
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch (requestCode){
-            // 得到了打电话的权限
+            // 得到了读取联系人的权限
             case MyPermission.PERMISSIONS_REQUEST_READ_CONTACTS:
                 // 这样才算成功拿到了权限
                 if (permissions[0].equals(Manifest.permission.READ_CONTACTS)&&grantResults[0]==0){
