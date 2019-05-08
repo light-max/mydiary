@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.lfq.diary.R;
 import com.lfq.diary.base.BaseAdapter;
 import com.lfq.diary.util.ColorTools;
+import com.lfq.diary.util.LanguageTools;
 
 public class DiaryAdapter extends BaseAdapter<ModelDiary> {
     public DiaryAdapter(Context context) {
@@ -15,6 +16,7 @@ public class DiaryAdapter extends BaseAdapter<ModelDiary> {
     }
 
     private ColorTools color= ColorTools.getInstance();
+    private LanguageTools language = LanguageTools.getHinstance();
 
     @Override
     protected int attrView() {
@@ -33,7 +35,11 @@ public class DiaryAdapter extends BaseAdapter<ModelDiary> {
         holder.day.setText(obj.getDate()+"");
         holder.week.setText(obj.parseWEEK());
         holder.time.setText(obj.parseHM());
-        holder.title.setText(obj.getTitle());
+        if (obj.getTitle().length()==0){
+            holder.title.setText(language.get("无标题"));
+        }else {
+            holder.title.setText(obj.getTitle());
+        }
         holder.content.setText(obj.getContent());
         holder.mood.setImageResource(MoodSelector.resId[obj.getMood()]);
         holder.weather.setImageResource(WeatherSelector.resId[obj.getWeather()]);

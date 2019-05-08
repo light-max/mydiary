@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.lfq.diary.R;
 import com.lfq.diary.base.BaseDialog;
 import com.lfq.diary.util.ColorTools;
+import com.lfq.diary.util.LanguageTools;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -55,7 +56,11 @@ public class NotepadDialog extends BaseDialog {
 
     public NotepadDialog setNotepad(ModelNotepad notepad) {
         this.notepad = notepad;
-        title.setText(notepad.getTitle());
+        if (notepad.getTitle().length()==0){
+            title.setText(LanguageTools.getHinstance().get("无标题"));
+        }else {
+            title.setText(notepad.getTitle());
+        }
         content.setText(notepad.getContent());
         return this;
     }

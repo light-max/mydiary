@@ -112,7 +112,11 @@ public class ContactDialog extends BaseDialog {
      */
     public ContactDialog setContact(ModelContact contact) {
         this.contact = contact;
-        name.setText(contact.getName());
+        if (contact.getName().length()==0){
+            name.setText(language.get("未命名"));
+        }else {
+            name.setText(contact.getName());
+        }
         phone.setText(contact.getPhone());
         return this;
     }

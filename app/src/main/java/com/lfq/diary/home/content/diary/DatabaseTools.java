@@ -60,10 +60,10 @@ public class DatabaseTools {
         if (cursor.moveToFirst()){
             do {
                 ModelDiary d = query(cursor);
-                // 如果上一个日记的月份小于这个月的月份，设置上一个日记的月份为“显示”
+                // 如果上一个日记的月份不等于这个月的月份，设置上一个日记的月份为“显示”
                 if (list.size()!=0){
                     ModelDiary up = list.get(0);
-                    if (d.getMonth() > up.getMonth()){
+                    if (d.getMonth() != up.getMonth()){
                         up.setShowMonth(true);
                     }
                 }

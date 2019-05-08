@@ -25,7 +25,11 @@ public class ContactsAdapter extends BaseAdapter<ModelContact> {
     protected void onGetView(View v, int position, ModelContact obj) {
         TextView name = VH.get(v,R.id.ic_name);
         TextView phone = VH.get(v,R.id.ic_phone);
-        name.setText(obj.getName());
+        if (obj.getName().length()==0){
+            name.setText("未命名");
+        }else {
+            name.setText(obj.getName());
+        }
         phone.setText(obj.getPhone());
         name.setTextColor(color.getProspectColor());
         phone.setTextColor(color.getProspectColor());

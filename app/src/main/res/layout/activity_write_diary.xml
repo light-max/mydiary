@@ -47,18 +47,18 @@
         <com.lfq.diary.home.content.diary.MoodSelector
             android:id="@+id/aw_mood"
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
-            android:layout_height="40dp"
-            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:layout_width="32dp"
             android:layout_gravity="bottom"
             android:layout_marginRight="10dp"
-            android:padding="10dp" />
+            android:padding="8dp" />
 
         <com.lfq.diary.home.content.diary.WeatherSelector
             android:id="@+id/aw_weather"
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:src="@mipmap/ic_weather_sunny"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_gravity="bottom"
             android:layout_marginRight="20dp"
             android:padding="4dp"/>

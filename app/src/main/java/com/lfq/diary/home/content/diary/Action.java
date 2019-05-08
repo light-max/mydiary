@@ -31,9 +31,6 @@ public class Action {
     public void save(WriteDiary activity){
         ModelDiary diary = activity.getDiary();
         diary.setTitle(activity.title.getText().toString());
-        if (diary.getTitle().length()==0){
-            diary.setTitle(languageTools.get("无标题"));
-        }
         diary.setContent(activity.content.getText().toString());
         diary.setMood(activity.mood.getPosition());
         diary.setWeather(activity.weather.getPosition());

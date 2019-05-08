@@ -18,7 +18,7 @@
             android:id="@+id/popwndlist"
             android:dividerHeight="1dp"
             android:divider="@color/white_3"
-            android:layout_width="40dp"
+            android:layout_width="32dp"
             android:layout_height="wrap_content">
         </ListView>
 

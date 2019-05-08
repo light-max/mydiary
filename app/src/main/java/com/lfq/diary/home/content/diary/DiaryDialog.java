@@ -42,7 +42,11 @@ public class DiaryDialog extends BaseDialog {
         date.setText(String.valueOf(diary.getDate()));
         week.setText(diary.parseWEEK());
         time.setText(diary.parseHM());
-        title.setText(diary.getTitle());
+        if (diary.getTitle().length()==0){
+            title.setText(language.get("无标题"));
+        }else {
+            title.setText(diary.getTitle());
+        }
         content.setText(diary.getContent());
     }
 

@@ -13,7 +13,7 @@ public class ImageNotepadIcon extends android.support.v7.widget.AppCompatImageVi
     public ImageNotepadIcon(Context context, AttributeSet attrs) {
         super(context, attrs);
         ColorTools color = ColorTools.getInstance();
-        super.setImageResource(R.mipmap.ic_book);
+        super.setImageResource(R.drawable.ic_book);
         super.setColorFilter(color.getProspectColor());
     }
 }

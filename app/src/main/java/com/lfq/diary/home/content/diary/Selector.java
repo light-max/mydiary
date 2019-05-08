@@ -46,7 +46,7 @@ public abstract class Selector extends android.support.v7.widget.AppCompatImageV
         if (popupWindow==null){
             initPopWindow();
         }
-        popupWindow.showAsDropDown(view,-25,0);
+        popupWindow.showAsDropDown(view,-26,-getHeight());
     }
 
     @Override

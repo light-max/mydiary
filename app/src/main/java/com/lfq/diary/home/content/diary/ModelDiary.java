@@ -131,7 +131,7 @@ public class ModelDiary implements Parcelable{
      * @return
      */
     public String parseHM(){
-        return hour+":"+minute;
+        return String.format("%d:%2d",hour,minute);
     }
 
     /**

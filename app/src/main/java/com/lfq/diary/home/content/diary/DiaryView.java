@@ -85,6 +85,12 @@ public class DiaryView extends BaseLayout implements AdapterView.OnItemClickList
                 int id = DatabaseTools.getHinstance().queryId(diary.getTime());
                 diary.setId(id);
                 list.add(0, diary);
+                // 设置是否显示月份
+                if (list.size() > 1){
+                    if (list.get(1).getMonth() != diary.getMonth()){
+                        list.get(1).setShowMonth(true);
+                    }
+                }
             } else {
                 ModelDiary q;
                 for (int i=0;i<list.size();i++){

@@ -62,9 +62,6 @@ public class WriteNotepad extends BaseActivity {
                         notepad==null?0:notepad.getId(),
                         WriteNotepad.this.title.getText().toString(),
                         content.getText().toString());
-                if (data.getTitle().length()==0){
-                    data.setTitle(tools.get("无标题"));
-                }
                 action.save(WriteNotepad.this, data,notepad==null);
                 finish();
             }

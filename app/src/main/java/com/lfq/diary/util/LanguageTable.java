@@ -76,9 +76,9 @@ public class LanguageTable {
             {"七月","7月","July"},
             {"八月","8月","August"},
             {"九月","9月","September"},
-            {"十一月","10月","October"},
-            {"十二月","11月","November"},
-            {"十三月","12月","December"},
+            {"十月","10月","October"},
+            {"十一月","11月","November"},
+            {"十二月","12月","December"},
     };
 
     /**

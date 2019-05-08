@@ -45,9 +45,6 @@ public class CreateContactsDialog extends BaseDialog {
     @OnClick(R.id.dcc_save)
     public void onSave(View view){
         ModelContact contact = new ModelContact(0,name.getText().toString(),phone.getText().toString());
-        if (contact.getName().length()==0){
-            contact.setName(language.get("未命名"));
-        }
         /**
          *  如果contact为空，那么就是插入了新数据，否则只是修改了原来的数据
          */

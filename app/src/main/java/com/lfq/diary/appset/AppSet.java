@@ -1,5 +1,7 @@
 package com.lfq.diary.appset;
 
+import android.content.Intent;
+import android.support.v4.content.LocalBroadcastManager;
 import android.view.View;
 import android.widget.TextView;
 
@@ -9,6 +11,9 @@ import com.lfq.diary.appset.activity.Backups;
 import com.lfq.diary.appset.activity.LanguageSet;
 import com.lfq.diary.appset.activity.PasswordSet;
 import com.lfq.diary.appset.activity.ThemeSytle;
+import com.lfq.diary.home.content.diary.DiaryView;
+import com.lfq.diary.home.content.notepad.NotepadView;
+import com.lfq.diary.home.content.phone.ContactsView;
 import com.lfq.diary.util.ActivityTools;
 import com.lfq.diary.base.BaseActivity;
 import com.lfq.diary.base.BaseTitle;
@@ -104,6 +109,15 @@ public class AppSet extends BaseActivity {
                 com.lfq.diary.home.content.diary.DatabaseTools.getHinstance().clear();
                 com.lfq.diary.home.content.phone.DatabaseTools.getHinstance().clear();
                 com.lfq.diary.home.content.notepad.DatabaseTools.getHinstance().clear();
+                Intent intent[] = new Intent[]{
+                        new Intent(DiaryView.CLEARALL_DIARY),
+                        new Intent(ContactsView.CLEARALL_CONTACTS),
+                        new Intent(NotepadView.CLEARALL_NOTEPAD),
+                };
+                LocalBroadcastManager manager = LocalBroadcastManager.getInstance(getmContext());
+                for (Intent broadcast:intent){
+                    manager.sendBroadcast(broadcast);
+                }
                 ToastTools.show("删除成功");
             }
             @Override
